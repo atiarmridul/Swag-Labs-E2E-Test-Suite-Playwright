@@ -1,0 +1,12 @@
+node_modules/
+.antigravitycli/
+/test-results/
+/blob-report/
+/playwright-report/
+/playwright/.cache/
+.env
+.env.*
+dist/
+build/
+
+

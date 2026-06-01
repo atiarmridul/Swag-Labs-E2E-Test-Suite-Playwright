@@ -1,0 +1,30 @@
+{
+  "name": "automation_with_playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "update-docs": "node scripts/update-docs.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.11.0",
+    "@html-eslint/eslint-plugin": "^0.27.0",
+    "@html-eslint/parser": "^0.27.0",
+    "@playwright/test": "^1.47.1",
+    "@types/node": "^22.5.5",
+    "@typescript-eslint/eslint-plugin": "^8.60.0",
+    "@typescript-eslint/parser": "^8.60.0",
+    "eslint": "^9.11.0",
+    "eslint-plugin-playwright": "^2.10.4",
+    "globals": "^15.9.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.8.3"
+  }
+}

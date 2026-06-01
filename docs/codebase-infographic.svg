@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Swag Labs Playwright Codebase Infographic</title>
+  <desc id="desc">High-level overview of test architecture, stack, flows, and CI for the SWAG LAB Basic Playwright project.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <text x="60" y="70" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700">
+    SWAG LAB Basic Playwright: Codebase Overview
+  </text>
+  <text x="60" y="105" fill="#9ca3af" font-family="Segoe UI, Arial, sans-serif" font-size="19">
+    End-to-end automation for SauceDemo with Page Object Model and GitHub Actions CI
+  </text>
+
+  <rect x="55" y="145" rx="16" ry="16" width="350" height="265" fill="url(#card)" stroke="#334155" stroke-width="2"/>
+  <text x="80" y="182" fill="#34d399" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Tech Stack</text>
+  <text x="80" y="220" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="20">• Playwright Test</text>
+  <text x="80" y="252" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="20">• TypeScript Page Objects</text>
+  <text x="80" y="284" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="20">• Node.js + npm</text>
+  <text x="80" y="316" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="20">• ESLint + Prettier</text>
+  <text x="80" y="348" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="20">• GitHub Actions</text>
+  <text x="80" y="385" fill="#93c5fd" font-family="Segoe UI, Arial, sans-serif" font-size="16">Browsers: Chromium + Firefox</text>
+
+  <rect x="425" y="145" rx="16" ry="16" width="350" height="265" fill="url(#card)" stroke="#334155" stroke-width="2"/>
+  <text x="450" y="182" fill="#f59e0b" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Test Flows</text>
+  <text x="450" y="220" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="20">1. Login as standard user</text>
+  <text x="450" y="252" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="20">2. Purchase flow (happy path)</text>
+  <text x="450" y="284" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="20">3. Sorting validations (4 modes)</text>
+  <text x="450" y="316" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="20">4. Checkout completion assert</text>
+  <text x="450" y="348" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="20">5. Logout and return to login</text>
+  <text x="450" y="385" fill="#93c5fd" font-family="Segoe UI, Arial, sans-serif" font-size="16">Specs: purchase.spec.ts, sorting.spec.ts</text>
+
+  <rect x="795" y="145" rx="16" ry="16" width="350" height="265" fill="url(#card)" stroke="#334155" stroke-width="2"/>
+  <text x="820" y="182" fill="#60a5fa" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Page Objects</text>
+  <text x="820" y="220" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="20">pages/login.ts</text>
+  <text x="820" y="252" fill="#9ca3af" font-family="Segoe UI, Arial, sans-serif" font-size="17">- gotoLoginPage(), login()</text>
+  <text x="820" y="288" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="20">pages/inventory.ts</text>
+  <text x="820" y="320" fill="#9ca3af" font-family="Segoe UI, Arial, sans-serif" font-size="17">- sorting, cart, checkout helpers</text>
+  <text x="820" y="356" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="20">pages/logout.ts</text>
+  <text x="820" y="388" fill="#9ca3af" font-family="Segoe UI, Arial, sans-serif" font-size="17">- logoutUser()</text>
+
+  <rect x="55" y="435" rx="16" ry="16" width="560" height="265" fill="url(#card)" stroke="#334155" stroke-width="2"/>
+  <text x="80" y="472" fill="#f87171" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Execution Pipeline</text>
+  <text x="80" y="515" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="19">Local:</text>
+  <text x="160" y="515" fill="#d1d5db" font-family="Consolas, monospace" font-size="18">npx playwright test</text>
+  <text x="80" y="548" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="19">Projects:</text>
+  <text x="170" y="548" fill="#d1d5db" font-family="Segoe UI, Arial, sans-serif" font-size="18">chromium, firefox</text>
+  <text x="80" y="581" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="19">Artifacts on failure:</text>
+  <text x="260" y="581" fill="#d1d5db" font-family="Segoe UI, Arial, sans-serif" font-size="18">trace, video, screenshot</text>
+  <text x="80" y="614" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="19">CI:</text>
+  <text x="120" y="614" fill="#d1d5db" font-family="Segoe UI, Arial, sans-serif" font-size="18">Push/PR -> install -> run tests -> upload report</text>
+  <text x="80" y="658" fill="#93c5fd" font-family="Segoe UI, Arial, sans-serif" font-size="16">Workflow: .github/workflows/playwright.yml</text>
+
+  <rect x="635" y="435" rx="16" ry="16" width="510" height="265" fill="url(#card)" stroke="#334155" stroke-width="2"/>
+  <text x="660" y="472" fill="#a78bfa" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Repository Map</text>
+  <text x="660" y="512" fill="#e5e7eb" font-family="Consolas, monospace" font-size="18">tests/      -> spec scenarios</text>
+  <text x="660" y="544" fill="#e5e7eb" font-family="Consolas, monospace" font-size="18">pages/      -> page abstractions</text>
+  <text x="660" y="576" fill="#e5e7eb" font-family="Consolas, monospace" font-size="18">docs/       -> guides and progress</text>
+  <text x="660" y="608" fill="#e5e7eb" font-family="Consolas, monospace" font-size="18">scripts/    -> automation utilities</text>
+  <text x="660" y="640" fill="#e5e7eb" font-family="Consolas, monospace" font-size="18">playwright.config.js -> runtime settings</text>
+  <text x="660" y="678" fill="#93c5fd" font-family="Segoe UI, Arial, sans-serif" font-size="16">Target app: https://www.saucedemo.com</text>
+</svg>
